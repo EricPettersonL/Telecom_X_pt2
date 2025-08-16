@@ -99,13 +99,13 @@ Foram treinados dois modelos principais:
 git clone https://github.com/EricPettersonL/Telecom_X_pt2.git
 ```
 2. Abra no Google Colab ou Jupyter Notebook.
+3. Copie o arquivo dados_tratados.csv para seu notebook
 
-3. Instale as dependências (se necessário):
+4. Instale as dependências (se necessário):
 ```bash
 pip install pandas numpy matplotlib seaborn
 ```
-
-4. Execute o notebook para reproduzir as análises.
+5. Execute o notebook para reproduzir as análises.
 ## 📖 Referências
 
 - [Scikit-Learn Documentation](https://scikit-learn.org/stable/)
