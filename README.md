@@ -1,9 +1,9 @@
 # 📊 Telecom X – Parte 2: Prevendo Churn  
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![Contribuições](https://img.shields.io/badge/contribui%C3%A7%C3%B5es-bem--vindas-brightgreen)
+![Python](https://img.shields.io/badge/python-3.11-blue?logo=python)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.3.1-orange?logo=scikit-learn)
+![Pandas](https://img.shields.io/badge/pandas-2.1.1-lightgrey?logo=pandas)
+![Seaborn](https://img.shields.io/badge/seaborn-0.12.2-red?logo=seaborn)
 
 ---
 
@@ -25,71 +25,85 @@ Neste projeto, damos continuidade à análise exploratória realizada na **Parte
 
 ---
 
-## 🧰 Tecnologias Utilizadas  
-- **Python 3.10+**  
-- **Pandas** e **NumPy** → manipulação e análise de dados  
-- **Matplotlib** e **Seaborn** → visualizações  
-- **Scikit-learn** → pré-processamento, modelagem e métricas  
-- **XGBoost / Random Forest** → modelos mais robustos de classificação  
+## 🧰 Tecnologias Utilizadas
+
+- Python 3.11  
+- Pandas, NumPy (manipulação de dados)  
+- Scikit-Learn (modelos de Machine Learning)  
+- Seaborn, Matplotlib (visualização de dados)  
 
 ---
 
-## 🔎 Etapas do Projeto  
+## 🔬 Análise e Modelagem
 
-### 1. Preparação dos Dados  
-- Importação da base tratada (limpeza já realizada na Parte 1).  
-- Encoding de variáveis categóricas.  
-- Normalização de variáveis numéricas.  
+### 1. Pré-processamento
 
-### 2. Seleção de Variáveis  
-- Análise de correlação entre variáveis numéricas.  
-- Aplicação de técnicas de seleção de features.  
+- Tratamento de valores nulos e inconsistentes  
+- Codificação de variáveis categóricas (One-Hot Encoding)  
+- Normalização de variáveis numéricas  
 
-### 3. Modelagem  
-Modelos testados:  
-- **Regressão Logística** (baseline, modelo simples e interpretável).  
-- **Random Forest / XGBoost** (modelos mais robustos e não-lineares).  
+### 2. Análise Exploratória
 
-### 4. Avaliação  
-Métricas utilizadas:  
-- Accuracy  
-- Precision  
-- Recall (foco principal, pois churn é mais sensível a falsos negativos)  
-- F1-score  
-- ROC-AUC  
+- Distribuição da variável target `evasao`  
+- Correlação entre variáveis numéricas  
+- Identificação das principais variáveis relacionadas ao churn  
 
-Além disso:  
-- Matrizes de confusão  
-- Curva ROC  
+### 3. Modelos Preditivos
 
-### 5. Interpretação dos Resultados  
-- Importância das variáveis nos modelos.  
-- Identificação dos fatores que mais influenciam a evasão.  
+Foram treinados dois modelos principais:
+
+1. **Regressão Logística**  
+   - Interpretável, captura bem clientes de alto risco (recall = 0.79)  
+   - Destaques: `total_gasto`, `total_servico_mes`, `meses_contrato`
+
+2. **Random Forest**  
+   - Captura relações não-lineares e interações complexas  
+   - Destaques: `total_gasto`, `meses_contrato`, `total_servico_mes`  
 
 ---
 
-## 📈 Resultados e Conclusões  
-- O modelo **XGBoost/Random Forest** apresentou melhor desempenho em termos de **Recall e AUC**, se mostrando mais adequado para prever clientes em risco de churn.  
-- Principais fatores que influenciam a evasão:  
-  - Tipo de contrato (mensal tende a ter mais churn).  
-  - Tempo de permanência (clientes novos apresentam maior evasão).  
-  - Valor mensal da fatura (valores mais altos correlacionam com maior cancelamento).  
-- Estratégias sugeridas:  
-  - Oferecer planos de fidelização e descontos para clientes de maior risco.  
-  - Criar programas de retenção específicos para novos clientes.  
-  - Monitorar clientes com alto ticket médio mensal e oferecer alternativas mais acessíveis.  
+## 📊 Resultados
+
+- Regressão Logística:  
+  - Accuracy: 74%  
+  - Recall churn: 79%  
+  - F1-score churn: 62%  
+
+- Random Forest:  
+  - Accuracy: 79%  
+  - Recall churn: 48%  
+  - F1-score churn: 55%  
+
+**Insight Estratégico:**  
+- Para estratégias de retenção, a **Regressão Logística** é mais eficaz na identificação de clientes de risco.  
+- Random Forest complementa ao capturar padrões complexos, mas perde recall da classe minoritária.
 
 ---
 
-## 🚀 Como Utilizar  
+## 💡 Estratégias de Retenção Sugeridas
 
-### 🔧 Requisitos  
-Certifique-se de ter instalado:  
-- Python 3.10+  
-- Git  
-- Pip  
+1. Programas de fidelidade e descontos para clientes de alto gasto  
+2. Monitoramento e contato proativo para clientes recém-contratados  
+3. Pacotes customizados baseados em perfil de uso  
+4. Campanhas de satisfação e suporte personalizado  
+5. Alerta para clientes de alto gasto sem engajamento  
 
-### 📥 Clonar o Repositório  
+---
+
+## 📥 Como Utilizar
+
+1. Clone o repositório:  
 ```bash
-git clone https://github.com/SEU_USUARIO/telecom-churn.git
-cd telecom-churn
+git clone https://github.com/SEU_USUARIO/Telecom_Churn_Project.git
+```
+
+## 📖 Referências
+
+- [Scikit-Learn Documentation](https://scikit-learn.org/stable/)
+- [Pandas Documentation](https://pandas.pydata.org/)
+- [Seaborn Documentation](https://seaborn.pydata.org/)
+
+
+## ⚡ Autor
+
+Eric Petterson Lima
