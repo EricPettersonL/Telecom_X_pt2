@@ -2,8 +2,10 @@
 
 ![Python](https://img.shields.io/badge/python-3.11-blue?logo=python)
 ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.3.1-orange?logo=scikit-learn)
-![Pandas](https://img.shields.io/badge/pandas-2.1.1-lightgrey?logo=pandas)
-![Seaborn](https://img.shields.io/badge/seaborn-0.12.2-red?logo=seaborn)
+![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-Data%20Viz-009688)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Charts-11557c)
 
 ---
 
@@ -94,7 +96,7 @@ Foram treinados dois modelos principais:
 
 1. Clone o repositório:  
 ```bash
-git clone https://github.com/SEU_USUARIO/Telecom_Churn_Project.git
+git clone https://github.com/EricPettersonL/Telecom_X_pt2.git
 ```
 2. Abra no Google Colab ou Jupyter Notebook.
 
