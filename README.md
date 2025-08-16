@@ -96,7 +96,14 @@ Foram treinados dois modelos principais:
 ```bash
 git clone https://github.com/SEU_USUARIO/Telecom_Churn_Project.git
 ```
+2. Abra no Google Colab ou Jupyter Notebook.
 
+3. Instale as dependências (se necessário):
+```bash
+pip install pandas numpy matplotlib seaborn
+```
+
+4. Execute o notebook para reproduzir as análises.
 ## 📖 Referências
 
 - [Scikit-Learn Documentation](https://scikit-learn.org/stable/)
